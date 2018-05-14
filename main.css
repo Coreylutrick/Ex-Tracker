@@ -1,3 +1,31 @@
 body {
-  background-color: blue;
+  background-color: peachpuff;
+}
+
+.exImg {
+  width: 25%;
+}
+
+.ex {
+  border: 3px solid red;
+  background-color: lightcoral;
+}
+
+.input {
+  width:20%;
+}
+
+.ex {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.locationImg {
+  width: 70%;
+}
+
+.location {
+  margin-top: 20px;
+  border: 3px solid red;
+  background-color: lightcoral;
 }
