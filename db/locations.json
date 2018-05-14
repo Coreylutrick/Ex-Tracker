@@ -1,0 +1,29 @@
+{
+  "locations":
+  [
+    {
+      "img": "http://lh3.google.com/radnorlake/R_AGJNnuOFI/AAAAAAAAAeo/4np7S_HA3Kg/s400/courthouse1.jpg",
+      "name": "Court House",
+      "address": "1234 Court Road",
+      "time": "Morning"
+    },
+    {
+      "img": "http://www.thegazette.com/storyimage/GA/20180323/ARTICLE/180329823/AR/0/AR-180329823.jpg&MaxH=500&MaxW=900",
+      "name": "Under Pass",
+      "address": "65 South",
+      "time": "Afternoon"
+    },
+    {
+      "img": "http://www.tenfourmagazine.com/content/wp-content/gallery/apr2017truckstops/TruckStops15.jpg",
+      "name": "Truck Stop",
+      "address": "5678 Bubble Road",
+      "time": "Evening"
+    },
+    {
+      "img": "http://chavezpark.org/wp-content/uploads/P1000825-Custom.jpg",
+      "name": "Port-A-Potty",
+      "address": "Somewhere",
+      "time": "Night"
+    }
+  ]
+}
