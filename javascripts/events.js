@@ -8,6 +8,7 @@ const initializeButtons = () =>
   $('button#afternoon').click(afternoon);
   $('button#evening').click(evening);
   $('button#night').click(night);
+  $('#searchBar').keypress(search);
 };
 
 const morning = () =>
@@ -28,6 +29,16 @@ const evening = () =>
 const night = () =>
 {
   $('#locationContainer').html(dom.writeLocationsNight(dataStore.getLocations()));
+};
+
+const search = (e) =>
+{
+  if (e.keyCode === 13)
+  {
+    const input = $(e.target).val();
+    $(`#locationContainer .location:not(:contains(${input}))`).hide();
+    $(e.target).val('');
+  }
 };
 
 module.exports = initializeButtons;
