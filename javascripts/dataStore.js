@@ -2,7 +2,7 @@ let locationData = [];
 
 const getLocations = () =>
 {
-  return locationData.locations;
+  return locationData;
 };
 
 const setLocations = (locations) =>

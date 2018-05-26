@@ -5,7 +5,29 @@
       "img": "http://backgroundcheckall.com/wp-content/uploads/2017/12/starfish-transparent-background-7.png",
       "name": "Poop Face",
       "age": "24",
-      "flaws": "Gold digger, all about me complex, smells, no lips."
+      "flaws": "Gold digger, all about me complex, smells, no lips.",
+      "location": [0,1,2]
+    },
+    {
+      "img": "http://backgroundcheckall.com/wp-content/uploads/2017/12/starfish-transparent-background-7.png",
+      "name": "Poop Head",
+      "age": "27",
+      "flaws": "Gold digger, all about me complex, smells, no lips.",
+      "location": [2,3,1]
+    },
+    {
+      "img": "http://backgroundcheckall.com/wp-content/uploads/2017/12/starfish-transparent-background-7.png",
+      "name": "Poop Hands",
+      "age": "25",
+      "flaws": "Gold digger, all about me complex, smells, no lips.",
+      "location": [0,3,2]
+    },
+    {
+      "img": "http://backgroundcheckall.com/wp-content/uploads/2017/12/starfish-transparent-background-7.png",
+      "name": "Poop Feet",
+      "age": "26",
+      "flaws": "Gold digger, all about me complex, smells, no lips.",
+      "location": [1,2,0]
     }
   ]
 }

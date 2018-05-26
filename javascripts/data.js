@@ -4,32 +4,28 @@ const loadLocations = require('./locations');
 const dataStore = require('./dataStore');
 const buttons = require('./events');
 
-const whenLocationsLoad = (data) =>
+const exProm = () =>
 {
-  $('#locationContainer').append(dom.writeLocations(data.locations));
-  dataStore.setLocations(data);
-  buttons();
-};
-
-const whenLocationsDontLoad = (error) =>
-{
-  console.log('error!', error);
-};
-
-const whenExLoads = (data) =>
-{
-  $('#exContainer').append(dom.writeEx(data.ex));
-};
-
-const whenExDoesntLoad = (error) =>
-{
-  console.log('error!', error);
+  const exes = loadEx().then((result) =>
+  {
+    $('#exContainer').html(dom.writeEx(result));
+    loadLocations().then((locations) =>
+    {
+      $('#locationContainer').html(dom.writeLocations(locations, result));
+      buttons.initializeButtons();
+      buttons.ExButtons();
+      dataStore.setLocations(locations);
+    });
+  });
+  return exes;
 };
 
 const initializer = () =>
 {
-  loadEx(whenExLoads, whenExDoesntLoad);
-  loadLocations(whenLocationsLoad, whenLocationsDontLoad);
+  exProm();
 };
 
-module.exports = initializer;
+module.exports =
+{
+  initializer,
+};

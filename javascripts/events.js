@@ -1,14 +1,62 @@
 const dom = require('./dom');
 const dataStore = require('./dataStore');
+const data = require('./singleEx');
+
+const ExButtons = () =>
+{
+  $('#24').click(ex1);
+  $('#25').click(ex2);
+  $('#26').click(ex3);
+  $('#27').click(ex4);
+};
 
 const initializeButtons = () =>
 {
-  $(document).ready();
   $('button#morning').click(morning);
   $('button#afternoon').click(afternoon);
   $('button#evening').click(evening);
   $('button#night').click(night);
   $('#searchBar').keypress(search);
+};
+
+const ex1 = () =>
+{
+  const myResults = [];
+  data.singleEx().then((results) =>
+  {
+    myResults.push(results);
+    $('#exContainer').html(dom.writeEx2(myResults));
+  });
+};
+
+const ex2 = () =>
+{
+  const myResults = [];
+  data.singleEx2().then((results) =>
+  {
+    myResults.push(results);
+    $('#exContainer').html(dom.writeEx2(myResults));
+  });
+};
+
+const ex3 = () =>
+{
+  const myResults = [];
+  data.singleEx3().then((results) =>
+  {
+    myResults.push(results);
+    $('#exContainer').html(dom.writeEx2(myResults));
+  });
+};
+
+const ex4 = () =>
+{
+  const myResults = [];
+  data.singleEx4().then((results) =>
+  {
+    myResults.push(results);
+    $('#exContainer').html(dom.writeEx2(myResults));
+  });
 };
 
 const morning = () =>
@@ -41,4 +89,8 @@ const search = (e) =>
   }
 };
 
-module.exports = initializeButtons;
+module.exports =
+{
+  initializeButtons,
+  ExButtons,
+};
